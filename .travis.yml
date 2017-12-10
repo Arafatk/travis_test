@@ -20,7 +20,7 @@ matrix:
     - rvm: jruby-head
 
 install:
-  - https://github.com/Shopify/liquid.git
+  - git clone https://github.com/Shopify/liquid.git
   - gem install rainbow -v 2.2.1
   - cd liquid && bundle install
 
