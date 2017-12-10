@@ -1,0 +1,30 @@
+language: ruby
+
+rvm:
+  - 2.1
+  - 2.2
+  - 2.3.3
+  - ruby-head
+  - jruby-head
+#  - rbx-2
+
+sudo: false
+
+addons:
+  apt:
+    packages:
+    - libgmp3-dev
+
+matrix:
+  allow_failures:
+    - rvm: jruby-head
+
+install:
+  - https://github.com/Shopify/liquid.git
+  - gem install rainbow -v 2.2.1
+  - cd liquid && bundle install
+
+script: "cd liquid && bundle exec rake"
+
+notifications:
+disable: true
