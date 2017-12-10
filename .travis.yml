@@ -59,3 +59,11 @@ before_install:
   - gem update --system
   - git clone https://github.com/jekyll/jekyll.git
   - cd jekyll
+
+notifications:
+  email:
+    recipients:
+      - arafat.da.khan@gmail.com
+    on_success: never # default: change
+    on_failure: always # default: always
+
