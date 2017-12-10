@@ -24,7 +24,7 @@ install:
   - gem install rainbow -v 2.2.1
   - cd liquid && bundle install
 
-script: "cd liquid && bundle exec rake"
+script: "bundle exec rake"
 
 notifications:
 disable: true
